@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Firebase AuthUser App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App React que utiliza Firebase para autenticação e Firestore para armazenar dados de usuários. O projeto inclui funcionalidades de registro, login e gerenciamento de dados de usuários.
 
-## Available Scripts
+Funcionalidades
+Registro de novos usuários com nome, sobrenome, data de nascimento, e-mail e senha.
+Login de usuários registrados.
+Armazenamento de informações dos usuários no Firestore.
+Mensagens de erro e sucesso durante o processo de autenticação.
 
-In the project directory, you can run:
+## Pré-requisitos
 
-### `npm start`
+* Node.js (versão 12 ou superior)
+* npm ou yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalação
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    
+Clone o repositório para sua máquina local e depois acesse a pasta do projeto
 
-### `npm test`
+```bash
+  cd firebase-authuser-app
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Instale as dependências necessárias:
 
-### `npm run build`
+```bash
+  npm install
+```
+ou, se estiver usando yarn:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Configuração do Firebase
+Você deve configurar o Firebase no projeto antes de executar a aplicação.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Crie um projeto no Firebase.
+* Ative a autenticação por e-mail/senha no console do Firebase.
+* Crie um banco de dados Firestore no modo "teste" para facilitar o desenvolvimento inicial.
+* Crie um arquivo .env.local na raiz do projeto com suas credenciais do Firebase.
 
-### `npm run eject`
+`REACT_APP_FIREBASE_API_KEY`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`REACT_APP_FIREBASE_AUTH_DOMAIN`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`REACT_APP_FIREBASE_PROJECT_ID`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`REACT_APP_FIREBASE_STORAGE_BUCKET`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`REACT_APP_FIREBASE_MESSAGING_SENDER_ID`
 
-## Learn More
+`REACT_APP_FIREBASE_APP_ID`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Depois de configurar as dependências e o Firebase, você pode rodar o projeto localmente com o comando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  npm start
+```
+ou, se estiver usando yarn:
 
-### Code Splitting
+```bash
+  yarn start
+```
+O projeto estará disponível em http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  npm build
+```
